@@ -1,10 +1,9 @@
 import React from 'react';
-import EventsTest from './pages/EventsTest';
 
 function App() {
   return (
-    <div>
-      <EventsTest />
+    <div className='text-red-600 text-2xl'>
+      <h1>hello to you</h1>
     </div>
   );
 }
