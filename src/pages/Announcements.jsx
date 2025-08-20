@@ -23,7 +23,7 @@ export default function Announcements() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500 mx-auto mb-4"></div>
           <p className="text-zinc-400">Chargement des annonces...</p>
@@ -33,7 +33,7 @@ export default function Announcements() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -72,7 +72,7 @@ export default function Announcements() {
                           allowFullScreen
                         ></iframe>
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center opacity-80">
+                          <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center opacity-80">
                             <FaPlay className="text-zinc-950 text-xl ml-1" />
                           </div>
                         </div>
@@ -147,5 +147,6 @@ export default function Announcements() {
     </div>
   );
 }
+
 
 

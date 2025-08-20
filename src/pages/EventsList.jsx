@@ -35,7 +35,7 @@ export default function EventList() {
   const getEventTypeColor = (type) => {
     switch (type) {
       case "classic": return "bg-yellow-500 text-zinc-950";
-      case "modern": return "bg-blue-500 text-white";
+      case "modern": return "bg-blue-800 text-white";
       case "vip": return "bg-purple-500 text-white";
       default: return "bg-zinc-600 text-white";
     }
@@ -52,7 +52,7 @@ export default function EventList() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500 mx-auto mb-4"></div>
           <p className="text-zinc-400">Chargement des événements...</p>
@@ -62,7 +62,7 @@ export default function EventList() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -169,5 +169,6 @@ export default function EventList() {
     </div>
   );
 }
+
 
 

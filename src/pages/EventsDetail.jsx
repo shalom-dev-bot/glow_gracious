@@ -29,7 +29,7 @@ export default function EventDetail() {
   const getEventTypeColor = (type) => {
     switch (type) {
       case "classic": return "bg-yellow-500 text-zinc-950";
-      case "modern": return "bg-blue-500 text-white";
+      case "modern": return "bg-blue-800 text-white";
       case "vip": return "bg-purple-500 text-white";
       default: return "bg-zinc-600 text-white";
     }
@@ -57,7 +57,7 @@ export default function EventDetail() {
 
   if (error || !event) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center px-6">
+      <div className="min-h-screen bg-black flex items-center justify-center px-6">
         <div className="text-center">
           <div className="w-16 h-16 bg-red-500 rounded-lg flex items-center justify-center mx-auto mb-4">
             <span className="text-white font-bold text-2xl">!</span>
@@ -73,7 +73,7 @@ export default function EventDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex items-center mb-8">

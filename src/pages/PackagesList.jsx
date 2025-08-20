@@ -33,8 +33,8 @@ export default function PackagesList() {
 
   const getPackageTypeColor = (type) => {
     switch (type) {
-      case "classic": return "bg-yellow-500 text-zinc-950";
-      case "modern": return "bg-blue-500 text-white";
+      case "classic": return "bg-yellow-400 text-zinc-950";
+      case "modern": return "bg-blue-800 text-white";
       case "vip": return "bg-purple-500 text-white";
       default: return "bg-zinc-600 text-white";
     }
@@ -51,7 +51,7 @@ export default function PackagesList() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500 mx-auto mb-4"></div>
           <p className="text-zinc-400">Chargement des packages...</p>
@@ -61,7 +61,7 @@ export default function PackagesList() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -127,7 +127,7 @@ export default function PackagesList() {
                 )}
                 
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-yellow-500 transition-colors">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors">
                     {pkg.name}
                   </h3>
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${getPackageTypeColor(pkg.service_type)}`}>
@@ -140,7 +140,7 @@ export default function PackagesList() {
                 </p>
 
                 <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center text-yellow-500">
+                  <div className="flex items-center text-yellow-400">
                     <FaStar className="mr-1" />
                     <FaStar className="mr-1" />
                     <FaStar className="mr-1" />
@@ -159,7 +159,7 @@ export default function PackagesList() {
                     <ul className="space-y-2">
                       {pkg.services.slice(0, 3).map((service, index) => (
                         <li key={index} className="flex items-center text-zinc-400">
-                          <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
+                          <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
                           {service.name}
                         </li>
                       ))}
@@ -189,5 +189,6 @@ export default function PackagesList() {
     </div>
   );
 }
+
 
 

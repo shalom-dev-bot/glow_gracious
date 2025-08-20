@@ -113,7 +113,7 @@ export default function PaymentCreate() {
 
   if (success) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center px-6">
+      <div className="min-h-screen bg-black flex items-center justify-center px-6">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
             <div className="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -135,9 +135,9 @@ export default function PaymentCreate() {
               </p>
             </div>
 
-            <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4 mb-6">
-              <h3 className="text-blue-400 font-medium mb-2">Prochaines étapes :</h3>
-              <ul className="text-blue-400 text-sm space-y-1 text-left">
+            <div className="bg-blue-800/10 border border-blue-800/20 rounded-lg p-4 mb-6">
+              <h3 className="text-blue-800 font-medium mb-2">Prochaines étapes :</h3>
+              <ul className="text-blue-800 text-sm space-y-1 text-left">
                 <li>• Vérifiez votre email de confirmation</li>
                 <li>• Votre réservation est maintenant confirmée</li>
                 <li>• Consultez vos paiements dans votre espace client</li>
@@ -157,7 +157,7 @@ export default function PaymentCreate() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center mb-8">
           <button
@@ -184,8 +184,8 @@ export default function PaymentCreate() {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Informations de réservation */}
               {booking && (
-                <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4 mb-6">
-                  <h3 className="text-blue-400 font-medium mb-2">Réservation</h3>
+                <div className="bg-blue-800/10 border border-blue-800/20 rounded-lg p-4 mb-6">
+                  <h3 className="text-blue-800 font-medium mb-2">Réservation</h3>
                   <div className="space-y-2">
                     <p className="text-white"><strong>Événement:</strong> {booking.event.title}</p>
                     <p className="text-zinc-400"><strong>Date:</strong> {booking.event.date}</p>
@@ -383,7 +383,7 @@ export default function PaymentCreate() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <FaCreditCard className="text-blue-400 mt-1" />
+                  <FaCreditCard className="text-blue-800 mt-1" />
                   <div>
                     <p className="text-white font-medium">Méthodes de paiement fiables</p>
                     <p className="text-zinc-400 text-sm">Nous acceptons les principales méthodes de paiement</p>

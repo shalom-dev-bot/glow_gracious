@@ -22,14 +22,14 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-950 flex items-center justify-center px-6">
+    <div className="min-h-screen bg-black flex items-center justify-center px-6">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-yellow-500 rounded-lg flex items-center justify-center mx-auto mb-4">
             <span className="text-zinc-950 font-bold text-2xl">G</span>
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">Connexion</h1>
-          <p className="text-zinc-400">Accédez à votre compte Grace Events</p>
+          <p className="text-zinc-400">Accédez à votre compte Glow gracious Events</p>
         </div>
 
         <div className="card">
@@ -74,7 +74,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-64 btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? "Connexion..." : "Se connecter"}
             </button>

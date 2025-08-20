@@ -168,7 +168,7 @@ export default function UserProfile() {
 
   if (!user) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500 mx-auto mb-4"></div>
           <p className="text-white">Chargement du profil...</p>
@@ -178,7 +178,7 @@ export default function UserProfile() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
@@ -243,10 +243,10 @@ export default function UserProfile() {
                     <img
                       src={previewImage}
                       alt="Profile"
-                      className="w-full h-full rounded-full object-cover border-4 border-blue-500"
+                      className="w-full h-full rounded-full object-cover border-4 border-blue-800"
                     />
                   ) : (
-                    <div className="w-full h-full rounded-full bg-blue-500 flex items-center justify-center border-4 border-blue-500">
+                    <div className="w-full h-full rounded-full bg-blue-800 flex items-center justify-center border-4 border-blue-800">
                       <FaUser className="text-white text-4xl" />
                     </div>
                   )}
@@ -274,7 +274,7 @@ export default function UserProfile() {
               <h2 className="text-xl font-bold text-white mb-2">
                 {user.display_name || user.username}
               </h2>
-              <p className="text-blue-400 mb-4">{getRoleName(user.role)}</p>
+              <p className="text-blue-800 mb-4">{getRoleName(user.role)}</p>
               
               <div className="space-y-2 text-sm">
                 <div className="flex items-center justify-center text-zinc-400">

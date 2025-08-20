@@ -30,7 +30,7 @@ export default function PaymentDetail() {
     switch (status) {
       case 'completed': return 'text-green-400 bg-green-500/10 border-green-500/20';
       case 'pending': return 'text-yellow-400 bg-yellow-500/10 border-yellow-500/20';
-      case 'processing': return 'text-blue-400 bg-blue-500/10 border-blue-500/20';
+      case 'processing': return 'text-blue-800 bg-blue-800/10 border-blue-800/20';
       case 'failed': return 'text-red-400 bg-red-500/10 border-red-500/20';
       case 'cancelled': return 'text-gray-400 bg-gray-500/10 border-gray-500/20';
       default: return 'text-gray-400 bg-gray-500/10 border-gray-500/20';
@@ -83,7 +83,7 @@ export default function PaymentDetail() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500 mx-auto mb-4"></div>
           <p className="text-white">Chargement du paiement...</p>
@@ -94,7 +94,7 @@ export default function PaymentDetail() {
 
   if (error || !payment) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 bg-red-500 rounded-lg flex items-center justify-center mx-auto mb-4">
             <FaTimesCircle className="text-white text-2xl" />
@@ -113,7 +113,7 @@ export default function PaymentDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
@@ -175,9 +175,9 @@ export default function PaymentDetail() {
               </div>
 
               {payment.transaction_id && (
-                <div className="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                <div className="mt-6 p-4 bg-blue-800/10 border border-blue-800/20 rounded-lg">
                   <p className="text-zinc-400 text-sm">ID de transaction</p>
-                  <p className="text-blue-400 font-mono">{payment.transaction_id}</p>
+                  <p className="text-blue-800 font-mono">{payment.transaction_id}</p>
                 </div>
               )}
             </div>

@@ -29,11 +29,11 @@ export default function Activate() {
   }, [token, navigate]);
 
   return (
-    <div className="min-h-screen bg-zinc-950 flex items-center justify-center px-6">
+    <div className="min-h-screen bg-black flex items-center justify-center px-6">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className={`w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 ${
-            status === "loading" ? "bg-blue-500" : 
+            status === "loading" ? "bg-blue-800" : 
             status === "success" ? "bg-green-500" : "bg-red-500"
           }`}>
             {status === "loading" && (
@@ -81,8 +81,8 @@ export default function Activate() {
           )}
           
           {status === "loading" && (
-            <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
-              <p className="text-blue-400 text-sm">
+            <div className="bg-blue-800/10 border border-blue-800/20 rounded-lg p-4">
+              <p className="text-blue-800 text-sm">
                 Veuillez patienter pendant que nous activons votre compte...
               </p>
             </div>

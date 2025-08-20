@@ -46,7 +46,7 @@ export default function Dashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500 mx-auto mb-4"></div>
           <p className="text-zinc-400">Chargement du dashboard...</p>
@@ -56,7 +56,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -78,8 +78,8 @@ export default function Dashboard() {
                 <p className="text-zinc-400 text-sm">Total Événements</p>
                 <p className="text-3xl font-bold text-white">{stats.totalEvents}</p>
               </div>
-              <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center">
-                <FaCalendarAlt className="text-yellow-500 text-xl" />
+              <div className="w-12 h-12 bg-yellow-400/20 rounded-lg flex items-center justify-center">
+                <FaCalendarAlt className="text-yellow-400 text-xl" />
               </div>
             </div>
           </div>
@@ -90,8 +90,8 @@ export default function Dashboard() {
                 <p className="text-zinc-400 text-sm">Réservations</p>
                 <p className="text-3xl font-bold text-white">{stats.totalBookings}</p>
               </div>
-              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                <FaUsers className="text-blue-500 text-xl" />
+              <div className="w-12 h-12 bg-blue-800/20 rounded-lg flex items-center justify-center">
+                <FaUsers className="text-blue-800 text-xl" />
               </div>
             </div>
           </div>
@@ -179,7 +179,7 @@ export default function Dashboard() {
                 to="/bookings"
                 className="flex items-center p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-colors"
               >
-                <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center mr-4">
                   <FaUsers className="text-white" />
                 </div>
                 <div>
@@ -207,5 +207,6 @@ export default function Dashboard() {
     </div>
   );
 }
+
 
 

@@ -31,7 +31,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -140,18 +140,18 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-white font-medium mb-1">Email</h3>
-                    <p className="text-zinc-400">contact@grace-events.com</p>
+                    <p className="text-zinc-400">shalomdev316@gmail.com</p>
                     <p className="text-zinc-400 text-sm">Réponse sous 24h</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center flex-shrink-0">
                     <FaPhone className="text-white" />
                   </div>
                   <div>
                     <h3 className="text-white font-medium mb-1">Téléphone</h3>
-                    <p className="text-zinc-400">+33 1 23 45 67 89</p>
+                    <p className="text-zinc-400">+237 692912914</p>
                     <p className="text-zinc-400 text-sm">Lun-Ven: 9h-18h</p>
                   </div>
                 </div>
@@ -162,8 +162,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-white font-medium mb-1">Adresse</h3>
-                    <p className="text-zinc-400">123 Rue de la Fête</p>
-                    <p className="text-zinc-400">75001 Paris, France</p>
+                    <p className="text-zinc-400">socada</p>
+                    <p className="text-zinc-400">bafoussam</p>
                   </div>
                 </div>
               </div>

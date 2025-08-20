@@ -36,7 +36,7 @@ export default function BookingList() {
   const getStatusColor = (status) => {
     switch (status) {
       case "confirmed": return "bg-green-500 text-white";
-      case "pending": return "bg-yellow-500 text-zinc-950";
+      case "pending": return "bg-yellow-400 text-zinc-950";
       case "canceled": return "bg-red-500 text-white";
       default: return "bg-zinc-600 text-white";
     }
@@ -53,7 +53,7 @@ export default function BookingList() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500 mx-auto mb-4"></div>
           <p className="text-zinc-400">Chargement des réservations...</p>
@@ -63,7 +63,7 @@ export default function BookingList() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -137,16 +137,16 @@ export default function BookingList() {
                     
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                       <div className="flex items-center text-zinc-400">
-                        <FaUser className="mr-2 text-yellow-500" />
+                        <FaUser className="mr-2 text-yellow-400" />
                         <span>Client: {booking.client?.username || booking.client?.email}</span>
                       </div>
                       <div className="flex items-center text-zinc-400">
-                        <FaCalendarAlt className="mr-2 text-yellow-500" />
+                        <FaCalendarAlt className="mr-2 text-yellow-400" />
                         <span>Date: {new Date(booking.booking_date).toLocaleDateString('fr-FR')}</span>
                       </div>
                       {booking.amount_paid && (
                         <div className="flex items-center text-zinc-400">
-                          <FaEuroSign className="mr-2 text-yellow-500" />
+                          <FaEuroSign className="mr-2 text-yellow-400" />
                           <span>Montant: {booking.amount_paid} €</span>
                         </div>
                       )}

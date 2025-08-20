@@ -56,7 +56,7 @@ export default function EventCreate() {
 
   if (!user || (user.role !== "admin" && user.role !== "agency")) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center px-6">
+      <div className="min-h-screen bg-black flex items-center justify-center px-6">
         <div className="text-center">
           <div className="w-16 h-16 bg-red-500 rounded-lg flex items-center justify-center mx-auto mb-4">
             <span className="text-white font-bold text-2xl">!</span>
@@ -69,7 +69,7 @@ export default function EventCreate() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center mb-8">
           <button

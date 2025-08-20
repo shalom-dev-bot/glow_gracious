@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
       const res = await API.post("/core/login/", { email, password });
       localStorage.setItem("accessToken", res.data.access);
       localStorage.setItem("refreshToken", res.data.refresh);
-      setUser({ email }); // tu peux ajouter plus de champs après un fetch
+      setUser(res.data.user);
     } catch (err) {
       console.error(err);
     }
@@ -26,14 +26,13 @@ export const AuthProvider = ({ children }) => {
   const register = async (username, email, password) => {
     try {
       await API.post("/core/register/", { username, email, password });
-      alert("Check your email to activate your account!");
     } catch (err) {
       console.error(err);
     }
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, register }}>
+    <AuthContext.Provider value={{ user, login, logout, register, updateUser: setUser }}>
       {children}
     </AuthContext.Provider>
   );

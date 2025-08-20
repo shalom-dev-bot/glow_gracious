@@ -43,7 +43,7 @@ export default function PaymentList() {
     switch (status) {
       case 'completed': return 'text-green-400 bg-green-500/10 border-green-500/20';
       case 'pending': return 'text-yellow-400 bg-yellow-500/10 border-yellow-500/20';
-      case 'processing': return 'text-blue-400 bg-blue-500/10 border-blue-500/20';
+      case 'processing': return 'text-blue-800 bg-blue-800/10 border-blue-800/20';
       case 'failed': return 'text-red-400 bg-red-500/10 border-red-500/20';
       case 'cancelled': return 'text-gray-400 bg-gray-500/10 border-gray-500/20';
       default: return 'text-gray-400 bg-gray-500/10 border-gray-500/20';
@@ -81,7 +81,7 @@ export default function PaymentList() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500 mx-auto mb-4"></div>
           <p className="text-white">Chargement des paiements...</p>
@@ -91,7 +91,7 @@ export default function PaymentList() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -115,7 +115,7 @@ export default function PaymentList() {
                 <p className="text-zinc-400 text-sm">Total Paiements</p>
                 <p className="text-2xl font-bold text-white">{stats.total_payments || 0}</p>
               </div>
-              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center">
                 <FaCreditCard className="text-white text-xl" />
               </div>
             </div>
@@ -226,7 +226,7 @@ export default function PaymentList() {
                   {filteredPayments.map((payment) => (
                     <tr key={payment.id} className="border-b border-zinc-800 hover:bg-zinc-800/50">
                       <td className="py-4 px-4">
-                        <span className="text-blue-400 font-mono">#{payment.id}</span>
+                        <span className="text-blue-800 font-mono">#{payment.id}</span>
                       </td>
                       <td className="py-4 px-4">
                         <div>
@@ -259,7 +259,7 @@ export default function PaymentList() {
                         <div className="flex items-center space-x-2">
                           <Link
                             to={`/payments/${payment.id}`}
-                            className="text-blue-400 hover:text-blue-300 transition-colors"
+                            className="text-blue-800 hover:text-blue-700 transition-colors"
                           >
                             <FaEye />
                           </Link>

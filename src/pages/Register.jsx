@@ -15,7 +15,7 @@ export default function Register() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
-
+  const [registeredEmail, setRegisteredEmail] = useState("");
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -41,6 +41,7 @@ export default function Register() {
     setIsLoading(true);
     try {
       await register(formData.username, formData.email, formData.password);
+      setRegisteredEmail(formData.email);
       setIsSuccess(true);
       setFormData({ username: "", email: "", password: "", confirmPassword: "" });
     } catch (error) {
@@ -53,7 +54,7 @@ export default function Register() {
 
   if (isSuccess) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center px-6">
+      <div className="min-h-screen bg-black flex items-center justify-center px-6">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
             <div className="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -68,7 +69,7 @@ export default function Register() {
               <FaEnvelope className="text-green-400 text-3xl mx-auto mb-4" />
               <h2 className="text-xl font-bold text-white mb-3">Vérifiez votre email</h2>
               <p className="text-green-400 mb-4">
-                Un email de confirmation a été envoyé à <strong>{formData.email}</strong>
+               Un email de confirmation a été envoyé à <strong>{registeredEmail}</strong>
               </p>
               <p className="text-zinc-400 text-sm">
                 Cliquez sur le lien dans l'email pour activer votre compte et commencer à utiliser Grace Events.
@@ -98,10 +99,10 @@ export default function Register() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 flex items-center justify-center px-6">
+    <div className="min-h-screen bg-black flex items-center justify-center px-6">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-yellow-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center mx-auto mb-4">
             <span className="text-zinc-950 font-bold text-2xl">G</span>
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">Créer un compte</h1>
@@ -206,7 +207,7 @@ export default function Register() {
           <div className="mt-6 text-center">
             <p className="text-zinc-400">
               Déjà un compte ?{" "}
-              <a href="/login" className="text-yellow-500 hover:text-yellow-400 font-medium">
+              <a href="/login" className="text-yellow-400 hover:text-yellow-300 font-medium">
                 Se connecter
               </a>
             </p>

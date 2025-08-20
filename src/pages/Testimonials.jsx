@@ -85,7 +85,7 @@ export default function Testimonials() {
     <div className={`card ${isFeatured ? 'border-yellow-500/50 bg-yellow-500/5' : ''}`}>
       <div className="flex items-start space-x-4">
         <div className="flex-shrink-0">
-          <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+          <div className="w-16 h-16 bg-blue-800 rounded-full flex items-center justify-center">
             <FaUser className="text-white text-xl" />
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function Testimonials() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500 mx-auto mb-4"></div>
           <p className="text-white">Chargement des témoignages...</p>
@@ -128,7 +128,7 @@ export default function Testimonials() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
           <div>
@@ -185,7 +185,7 @@ export default function Testimonials() {
 
         {showCreateForm && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-zinc-900 rounded-lg p-6 w-full max-w-2xl">
+            <div className="bg-zinc-950 rounded-lg p-6 w-full max-w-2xl">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-white">Nouveau témoignage</h2>
                 <button

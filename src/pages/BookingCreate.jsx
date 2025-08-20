@@ -69,7 +69,7 @@ export default function BookingCreate() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500 mx-auto mb-4"></div>
           <p className="text-zinc-400">Chargement de l'événement...</p>
@@ -80,7 +80,7 @@ export default function BookingCreate() {
 
   if (!eventId || !event) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center px-6">
+      <div className="min-h-screen bg-black flex items-center justify-center px-6">
         <div className="text-center">
           <div className="w-16 h-16 bg-red-500 rounded-lg flex items-center justify-center mx-auto mb-4">
             <span className="text-white font-bold text-2xl">!</span>
@@ -99,7 +99,7 @@ export default function BookingCreate() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-8 px-6">
+    <div className="min-h-screen bg-black py-8 px-6">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="flex items-center mb-8">
@@ -136,7 +136,7 @@ export default function BookingCreate() {
 
               <div className="space-y-3">
                 <div className="flex items-center text-zinc-400">
-                  <FaCalendarAlt className="mr-3 text-yellow-500" />
+                  <FaCalendarAlt className="mr-3 text-yellow-400" />
                   <span className="font-medium">Date:</span>
                   <span className="ml-2">{new Date(event.date).toLocaleDateString('fr-FR', {
                     weekday: 'long',
@@ -147,7 +147,7 @@ export default function BookingCreate() {
                 </div>
 
                 <div className="flex items-center text-zinc-400">
-                  <FaEuroSign className="mr-3 text-yellow-500" />
+                  <FaEuroSign className="mr-3 text-yellow-400" />
                   <span className="font-medium">Prix:</span>
                   <span className="ml-2">{event.total_price ? `${event.total_price} €` : "Non spécifié"}</span>
                 </div>

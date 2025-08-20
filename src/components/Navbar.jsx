@@ -29,39 +29,39 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-zinc-900 border-b border-zinc-800 px-6 py-4 relative">
+    <nav className="bg-black border-b border-zinc-900 px-6 py-4 relative">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2" onClick={closeMenus}>
-          <div className="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center">
-            <span className="text-zinc-950 font-bold text-lg">G</span>
+          <div className="w-8 h-8 bg-yellow-400 rounded-lg flex items-center justify-center">
+            <span className="text-zinc-950 font-bold text-lg">GGE</span>
           </div>
-          <span className="text-white font-bold text-xl">Grace Events</span>
+          <span className="text-white font-bold text-xl"><span className="text-yellow-400">Glow </span><span className="text-blue-800">gracious Events</span></span>
         </Link>
 
         {/* Desktop Navigation Links */}
         <div className="hidden lg:flex items-center space-x-8">
-          <Link to="/" className="flex items-center space-x-2 text-white hover:text-yellow-500 transition-colors">
+          <Link to="/" className="flex items-center space-x-2 text-white hover:text-blue-800 transition-colors">
             <FaHome />
             <span>Accueil</span>
           </Link>
-          <Link to="/events" className="flex items-center space-x-2 text-white hover:text-yellow-500 transition-colors">
+          <Link to="/events" className="flex items-center space-x-2 text-white hover:text-blue-800 transition-colors">
             <FaCalendarAlt />
             <span>Événements</span>
           </Link>
-          <Link to="/packages" className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors">
+          <Link to="/packages" className="flex items-center space-x-2 text-white hover:text-blue-800 transition-colors">
             <FaGift />
             <span>Packages</span>
           </Link>
-          <Link to="/testimonials" className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors">
+          <Link to="/testimonials" className="flex items-center space-x-2 text-white hover:text-blue-800 transition-colors">
             <FaStar />
             <span>Témoignages</span>
           </Link>
-          <Link to="/announcements" className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors">
+          <Link to="/announcements" className="flex items-center space-x-2 text-white hover:text-blue-800 transition-colors">
             <FaBullhorn />
             <span>Annonces</span>
           </Link>
-          <Link to="/contact" className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors">
+          <Link to="/contact" className="flex items-center space-x-2 text-white hover:text-blue-800 transition-colors">
             <FaEnvelope />
             <span>Contact</span>
           </Link>
@@ -72,12 +72,12 @@ export default function Navbar() {
                 <span>Dashboard</span>
               </Link>
               {user.role === "admin" && (
-                <Link to="/admin" className="flex items-center space-x-2 text-yellow-500 hover:text-yellow-400 transition-colors">
+                <Link to="/admin" className="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300 transition-colors">
                   <FaCrown />
                   <span>Admin</span>
                 </Link>
               )}
-              <Link to="/payments" className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors">
+              <Link to="/payments" className="flex items-center space-x-2 text-white hover:text-blue-800 transition-colors">
                 <FaCreditCard />
                 <span>Paiements</span>
               </Link>
@@ -105,15 +105,15 @@ export default function Navbar() {
                       <img
                         src={user.profile_image}
                         alt={user.username || user.email}
-                        className="w-8 h-8 rounded-full object-cover border-2 border-blue-500"
+                        className="w-8 h-8 rounded-full object-cover border-2 border-blue-800"
                       />
                     ) : (
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center">
                         <FaUserCircle className="text-white text-lg" />
                       </div>
                     )}
                     {/* Online indicator */}
-                    <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-zinc-900"></div>
+                    <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-black"></div>
                   </div>
                   
                   {/* User Info */}
@@ -121,7 +121,7 @@ export default function Navbar() {
                     <div className="text-white text-sm font-medium">
                       {user.username || user.email}
                     </div>
-                    <div className="text-blue-400 text-xs capitalize">
+                    <div className="text-blue-800 text-xs capitalize">
                       {user.role || 'client'}
                     </div>
                   </div>
@@ -129,12 +129,12 @@ export default function Navbar() {
                 
                 {/* Dropdown Menu */}
                 {isUserMenuOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-zinc-800 border border-zinc-700 rounded-lg shadow-lg z-50">
+                  <div className="absolute right-0 mt-2 w-48 bg-zinc-950 border border-zinc-800 rounded-lg shadow-lg z-50">
                     <div className="py-2">
                       <Link
                         to="/profile"
                         onClick={closeMenus}
-                        className="flex items-center px-4 py-2 text-white hover:bg-zinc-700 transition-colors"
+                        className="flex items-center px-4 py-2 text-white hover:bg-zinc-800 transition-colors"
                       >
                         <FaUser className="mr-3" />
                         Mon Profil
@@ -142,7 +142,7 @@ export default function Navbar() {
                       <Link
                         to="/dashboard"
                         onClick={closeMenus}
-                        className="flex items-center px-4 py-2 text-white hover:bg-zinc-700 transition-colors"
+                        className="flex items-center px-4 py-2 text-white hover:bg-zinc-800 transition-colors"
                       >
                         <FaCog className="mr-3" />
                         Paramètres
@@ -176,7 +176,7 @@ export default function Navbar() {
         <div className="lg:hidden">
           <button
             onClick={toggleMobileMenu}
-            className="text-white hover:text-yellow-500 transition-colors"
+            className="text-white hover:text-yellow-400 transition-colors"
           >
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -185,31 +185,31 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-zinc-900 border-b border-zinc-800 z-50">
+        <div className="lg:hidden absolute top-full left-0 right-7 bg-black border-b border-zinc-900 z-50">
           <div className="px-6 py-4 space-y-4">
             {/* Navigation Links */}
             <div className="space-y-3">
-              <Link to="/" className="flex items-center space-x-3 text-white hover:text-yellow-500 transition-colors" onClick={closeMenus}>
+              <Link to="/" className="flex items-center space-x-3 text-white hover:text-yellow-400 transition-colors" onClick={closeMenus}>
                 <FaHome />
                 <span>Accueil</span>
               </Link>
-              <Link to="/events" className="flex items-center space-x-3 text-white hover:text-yellow-500 transition-colors" onClick={closeMenus}>
+              <Link to="/events" className="flex items-center space-x-3 text-white hover:text-yellow-400 transition-colors" onClick={closeMenus}>
                 <FaCalendarAlt />
                 <span>Événements</span>
               </Link>
-              <Link to="/packages" className="flex items-center space-x-3 text-white hover:text-blue-400 transition-colors" onClick={closeMenus}>
+              <Link to="/packages" className="flex items-center space-x-3 text-white hover:text-blue-800 transition-colors" onClick={closeMenus}>
                 <FaGift />
                 <span>Packages</span>
               </Link>
-              <Link to="/testimonials" className="flex items-center space-x-3 text-white hover:text-blue-400 transition-colors" onClick={closeMenus}>
+              <Link to="/testimonials" className="flex items-center space-x-3 text-white hover:text-blue-800 transition-colors" onClick={closeMenus}>
                 <FaStar />
                 <span>Témoignages</span>
               </Link>
-              <Link to="/announcements" className="flex items-center space-x-3 text-white hover:text-blue-400 transition-colors" onClick={closeMenus}>
+              <Link to="/announcements" className="flex items-center space-x-3 text-white hover:text-blue-800 transition-colors" onClick={closeMenus}>
                 <FaBullhorn />
                 <span>Annonces</span>
               </Link>
-              <Link to="/contact" className="flex items-center space-x-3 text-white hover:text-blue-400 transition-colors" onClick={closeMenus}>
+              <Link to="/contact" className="flex items-center space-x-3 text-white hover:text-blue-800 transition-colors" onClick={closeMenus}>
                 <FaEnvelope />
                 <span>Contact</span>
               </Link>
@@ -217,22 +217,22 @@ export default function Navbar() {
 
             {/* User-specific links */}
             {user && (
-              <div className="space-y-3 border-t border-zinc-700 pt-4">
-                <Link to="/dashboard" className="flex items-center space-x-3 text-white hover:text-blue-400 transition-colors" onClick={closeMenus}>
+              <div className="space-y-3 border-t border-zinc-800 pt-4">
+                <Link to="/dashboard" className="flex items-center space-x-3 text-white hover:text-blue-800 transition-colors" onClick={closeMenus}>
                   <FaTachometerAlt />
                   <span>Dashboard</span>
                 </Link>
                 {user.role === "admin" && (
-                  <Link to="/admin" className="flex items-center space-x-3 text-yellow-500 hover:text-yellow-400 transition-colors" onClick={closeMenus}>
+                  <Link to="/admin" className="flex items-center space-x-3 text-yellow-400 hover:text-yellow-300 transition-colors" onClick={closeMenus}>
                     <FaCrown />
                     <span>Admin</span>
                   </Link>
                 )}
-                <Link to="/payments" className="flex items-center space-x-3 text-white hover:text-blue-400 transition-colors" onClick={closeMenus}>
+                <Link to="/payments" className="flex items-center space-x-3 text-white hover:text-blue-800 transition-colors" onClick={closeMenus}>
                   <FaCreditCard />
                   <span>Paiements</span>
                 </Link>
-                <Link to="/profile" className="flex items-center space-x-3 text-white hover:text-blue-400 transition-colors" onClick={closeMenus}>
+                <Link to="/profile" className="flex items-center space-x-3 text-white hover:text-blue-800 transition-colors" onClick={closeMenus}>
                   <FaUser />
                   <span>Mon Profil</span>
                 </Link>
@@ -247,7 +247,7 @@ export default function Navbar() {
 
             {/* Auth buttons */}
             {!user ? (
-              <div className="space-y-3 border-t border-zinc-700 pt-4">
+              <div className="space-y-3 border-t border-zinc-800 pt-4">
                 <Link to="/login" className="block w-full btn-blue text-center" onClick={closeMenus}>
                   Connexion
                 </Link>
@@ -256,7 +256,7 @@ export default function Navbar() {
                 </Link>
               </div>
             ) : (
-              <div className="border-t border-zinc-700 pt-4">
+              <div className="border-t border-zinc-800 pt-4">
                 <button
                   onClick={handleLogout}
                   className="flex items-center space-x-3 text-white hover:text-red-400 transition-colors w-full"
